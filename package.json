@@ -14,15 +14,15 @@
     "lint-staged": "^12.3.4",
     "prettier": "2.5.1"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "*.{js,css,json,md}": [
       "prettier --write",
       "git add"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }
