@@ -43,3 +43,24 @@ npm install lint-staged
 ```
 npx mrm lint-staged
 ```
+
+- package.json 的配置项具体如下：
+
+```
+"devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "2.5.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+```
